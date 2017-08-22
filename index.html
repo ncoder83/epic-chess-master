@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/skeleton.css">
         <link rel="stylesheet" href="css/custom.css">
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/site.js"></script>
     </head>
@@ -16,7 +15,6 @@
         <section class="header">
           <h2 class="title">Chess leaderboard tracker. &#9822; &#9814;</h2>
         </section>
-        <!-- <div class="navbar-spacer"></div> -->
         <nav class="navbar">
           <div class="container">
             <ul class="navbar-list">
@@ -26,18 +24,18 @@
             </ul>
           </div>
         </nav>
-
         <div class="docs-section" id="intro">
             <h6 class="docs-header">Current Chess Master</h6>
             <p style="text-align:center">
                 <img src="" alt="" width="250" height="250">
             </p>
         </div>
-
         <div class="docs-section" id="board">
           <h6 class="docs-header">Current Board</h6>
           <div class="docs-example">
-            <table class="u-full-width">
+              <pre class="object"></pre>
+
+            <table class="u-full-width" id="usersTbl">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -47,34 +45,20 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Dave Gamache</td>
-                  <td>26</td>
-                  <td>Male</td>
-                  <td>San Francisco</td>
-                </tr>
-                <tr>
-                  <td>Dwayne Johnson</td>
-                  <td>42</td>
-                  <td>Male</td>
-                  <td>Hayward</td>
-                </tr>
               </tbody>
             </table>
           </div>
         </div>
-      
         <div class="docs-section" id="aboutus">
           <h6 class="docs-header">About Us</h6>
-          <p>Skeleton uses media queries to serve its scalable grid, 
-              but also has a list of queries for convenience of styling 
-              your site across devices. The queries are mobile-first, meaning they target 
-              <code>min-width</code>. 
-              Mobile-first queries are how Skeleton's grid is built and is the preferrable 
-              method of organizing CSS. It means all styles outside of a query apply to all devices, 
-              then larger devices are targeted for enhancement. This prevents small devices 
-              from having to parse tons of unused CSS. The sizes for the queries are:
-        </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Nulla rerum dolore cumque, nemo natus saepe neque debitis ullam eum mollitia 
+              aspernatur perspiciatis molestiae aperiam incidunt laudantium quibusdam 
+              reiciendis accusamus in.</p>
+         
         </div>
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+        <script src="/app/app.js"></script>
+        <script src="/app/idx.js"></script>
     </body>
 </html>
