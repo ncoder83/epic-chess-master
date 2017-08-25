@@ -1,7 +1,7 @@
 (function(db){
     'use strict';
     
-    const chessMasterRef = db.createdb('chessmasters');
+    const chessMasterRef = db.createdb('chessplayers');
 
     const usernameField = document.getElementById('username');
     const addUserButton = document.getElementById('addUser');
@@ -42,7 +42,7 @@
     });
 
     //read the data and on the value event use our callbacks
-    db.readdb('chessmasters').on('value', successOnRead, failureOnRead );
+    db.readdb('chessplayers').on('value', successOnRead, failureOnRead );
 
     //when data is returned
     function successOnRead(data){

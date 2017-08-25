@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>&#9822; &#9814;</title>
+        <title>&#9822; &#9814; Main</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">  
         <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
@@ -9,6 +9,23 @@
         <link rel="stylesheet" href="css/custom.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/site.js"></script>
+        <style>
+          img#chess-master{
+            width: 250px;
+            height: auto;
+          } 
+          .image{
+            position:relative;
+            width: 100%;
+          }
+          .image h2{
+            position:absolute;
+            top:117px;
+            left:5px;
+            width:100%;
+            color:#fff;
+          }
+        </style>
     </head>
     <body class="code-snippets-visible">
     <div class="container">
@@ -24,11 +41,27 @@
             </ul>
           </div>
         </nav>
-        <div class="docs-section" id="intro">
-            <h6 class="docs-header">Current Chess Master</h6>
-            <p style="text-align:center">
-                <img src="" alt="" width="250" height="250">
-            </p>
+        <div class="docs-section" id="intro">          
+            <div class="row">
+                <div class="six columns">
+                    <h6 class="docs-header">Current Chess Lion</h6>
+                    <p style="text-align:center">
+                      <div class="image">
+                        <img src="img/lion.jpg" alt="" id='chess-master'>
+                        <h2><span id="current-master">Alejandro</span></h2>
+                      </div>
+                    </p>
+                </div>            
+                <div class="six columns">
+                       <h6 class="docs-header">Current Chess Zebra</h6>
+                      <p style="text-align:center">
+                        <div class="image">
+                          <img src="img/zebra.jpg" alt="" id='chess-master'>
+                          <h2><span id="current-master">Rolando</span></h2>
+                        </div>
+                      </p>
+                </div>
+            </div>
         </div>
         <div class="docs-section" id="board">
           <h6 class="docs-header">Current Board</h6>
