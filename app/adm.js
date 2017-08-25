@@ -6,34 +6,14 @@
     const usernameField = document.getElementById('username');
     const addUserButton = document.getElementById('addUser');
     const logoutButton = document.getElementById('logoutBtn');
-
+    
     db.auth().onAuthStateChanged(fbUser => {
         if(fbUser){//do nothing
+            console.log(fbUser);
         }
         else{//if we are not logged-in goto login page
             location.href = "login.html";        
         }
-    });
-
-    //check to see if we are logged in
-    //when submit button is clicked
-    addUserButton.addEventListener('click', e => {
-        if(usernameField.value.length === 0){
-            alert('you must enter a Name!');
-            return;
-        }
-        //add user info to firebase
-        const userData = {
-            name: usernameField.value,
-            win:0,
-            loss:0,
-            draw:0,
-            created: new Date()
-        };
-        //console.log(userData);
-        chessMasterRef.push(userData);
-        alert('User ' + userData.name + ' added successfully');
-        usernameField.value = '';
     });
 
     logoutButton.addEventListener('click', e => {
@@ -54,10 +34,14 @@
             td +=  "<td>" + chessMasters[item].win + "</td>";
             td +=  "<td>" + chessMasters[item].loss + "</td>";
             td +=  "<td>" + chessMasters[item].draw + "</td>";
+            td += "<td><button id='"+item+"' class='button' oncClick='challenge(this.id)'>Challenge</button><td>";
             var tr = "<tr>" + td + "</tr>";
             $('#usersTbl tbody').append(tr);//append that row       
         });
     }
+
+
+
 
     ///when data failed to arrived
     function failureOnRead(err){
@@ -68,3 +52,7 @@
 
     }
 })(fire);
+
+    function challenge(userId){
+        alert('are you ready to get rekt');
+    }

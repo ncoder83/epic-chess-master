@@ -14,7 +14,7 @@
 
         const promise = auth.signInWithEmailAndPassword(email, pass);
 
-        promise.then(d => { location.href ="index.html";})
+        promise.then(d => { location.href ="cm-admin/index.html";})
         .catch( e => console.log(e.message));
     });
 

@@ -13,45 +13,24 @@
         <div class="container">
             <button class="button" id="logoutBtn">Logout</button>
             <section class="header">
-              <h2 class="title">Add User. &#9822; &#9814;</h2>
+              <h2 class="title">Welcome <span class="username"></span> &#9822; &#9814;</h2>
             </section>
-
-            <div class="docs-section" id="forms">
-              
-                <div class="docs-example docs-example-forms">
-                    <div class="row">
-                        <div class="four columns">
-                            <label for="username">Your name</label>
-                            <input class="u-full-width" type="text" placeholder="lion" id="username">
-                        </div>
-                        <div class="four columns">
-                            <label for="addUser">-</label>
-                            <button class="button-primary" id="addUser">Add User</button>            
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="docs-section">
-                    <table class="u-full-width" id="usersTbl">
-                            <thead>
-                              <tr>
-                                <th>Name</th>
-                                <th>Win(s)</th>
-                                <th>Loss(es)</th>
-                                <th>Draw(s)</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              
-                            </tbody>
-                          </table>
+                <table class="u-full-width" id="usersTbl">
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Win(s)</th>
+                        <th>Loss(es)</th>
+                        <th>Draw(s)</th>
+                        <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>                        
+                    </tbody>
+                </table>
             </div>
 
-            <div class="docs-section">
-                <section class="header">
-                    <h2>Setup match</h2>
-                </section>
-            </div>
             <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>        
             <script src="/app/app.js"></script>
             <script src="/app/adm.js"></script>

@@ -9,9 +9,7 @@
     const registerBtn = document.getElementById('registerBtn');
 
     registerBtn.addEventListener('click', e => {
-        alert('register button clicked');
-
-        
+        //validate         
         if(!hasInfo(txtUsername.value)){
             alert('Please enter your username'); return;
         }
@@ -23,25 +21,20 @@
         if(!areTheSame(txtPassword.value, txtCPassword.value)){
             alert("Passwords don't match");return;
         }
-        //add user with 
+    
         const email = txtEmail.value;
         const pass = txtPassword.value;
         
         const auth = db.auth();
         const chessMasterRef = db.createdb('chessplayers');
+        const userData = {name: txtUsername.value, win: 0, loss: 0, draw: 0, created: new Date()};        
 
-        auth.createUserWithEmailAndPassword(email, pass);
-
-         const userData = {
-            name: txtUsername.value,
-            win:0,
-            loss:0,
-            draw:0,
-            created: new Date()
-        };
-        //console.log(userData);
-        chessMasterRef.push(userData);
-        
+        const promise = auth.createUserWithEmailAndPassword(email, pass);        
+        chessMasterRef.push(userData); 
+        promise.then(d => {
+            alert('registration completed succesfully!!');    
+            location.href = "login.html";
+        }).catch(e => console.log(e.message));        
     });
 
     function hasInfo(txt){
