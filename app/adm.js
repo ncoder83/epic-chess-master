@@ -41,7 +41,9 @@
     }
 
 
-
+    function challenge(userId){
+        alert('are you ready to get rekt');
+    }
 
     ///when data failed to arrived
     function failureOnRead(err){
@@ -53,6 +55,3 @@
     }
 })(fire);
 
-    function challenge(userId){
-        alert('are you ready to get rekt');
-    }
